@@ -15,10 +15,13 @@ class Blog extends Component {
             </ul>
           </nav>
         </header>
-        {/* if path match, route will be replace itself with content you define in render */}
-        <Route path='/' exact render={ () => <h1>home</h1> } />
-        {/* second route will be rendered always */}
-        <Route path='/' render={ () => <h1>home 2</h1> } />
+        {/*
+          if path match, route will be replace itself with content you define in render
+          <Route path='/' exact render={ () => <h1>home</h1> } />
+          //second route will be rendered always
+          <Route path='/' render={ () => <h1>home 2</h1> } />
+        */}
+        <Route path='/' exact component={Posts} />
       </div>
     );
   }
